@@ -1,0 +1,321 @@
+[debug] [2025-02-26T11:19:31.051Z] ----------------------------------------------------------------------
+[debug] [2025-02-26T11:19:31.054Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\heman\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2025-02-26T11:19:31.055Z] CLI Version:   13.31.2
+[debug] [2025-02-26T11:19:31.055Z] Platform:      win32
+[debug] [2025-02-26T11:19:31.055Z] Node Version:  v22.13.1
+[debug] [2025-02-26T11:19:31.056Z] Time:          Wed Feb 26 2025 11:19:31 GMT+0000 (Greenwich Mean Time)
+[debug] [2025-02-26T11:19:31.056Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-02-26T11:19:31.292Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-02-26T11:19:31.292Z] > authorizing via signed-in user (tn.gangwar@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\heman\bvalue\bvalue-firebase
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2025-02-26T11:19:57.799Z] Using project from CLI flag: bvalue-data-scientist
+[debug] [2025-02-26T11:19:57.802Z] Checked if tokens are valid: false, expires at: 1740569101180
+[debug] [2025-02-26T11:19:57.803Z] Checked if tokens are valid: false, expires at: 1740569101180
+[debug] [2025-02-26T11:19:57.803Z] > refreshing access token with scopes: []
+[debug] [2025-02-26T11:19:57.807Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-02-26T11:19:57.807Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-02-26T11:19:58.000Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-02-26T11:19:58.001Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-02-26T11:19:58.021Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/bvalue-data-scientist [none]
+[debug] [2025-02-26T11:19:58.314Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/bvalue-data-scientist 200
+[debug] [2025-02-26T11:19:58.314Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/bvalue-data-scientist {"projectId":"bvalue-data-scientist","projectNumber":"337049350975","displayName":"BValue Data Scientist","name":"projects/bvalue-data-scientist","resources":{"hostingSite":"bvalue-data-scientist","realtimeDatabaseInstance":"bvalue-data-scientist-default-rtdb"},"state":"ACTIVE","etag":"1_5be28929-911a-46b0-a8c2-ea4994fa3ef2"}
+[info] i  Using project bvalue-data-scientist (BValue Data Scientist) 
+[info] 
+=== Dataconnect Setup
+[debug] [2025-02-26T11:19:58.337Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:19:58.337Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:19:58.337Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/bvalue-data-scientist/billingInfo [none]
+[debug] [2025-02-26T11:19:59.083Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/bvalue-data-scientist/billingInfo 200
+[debug] [2025-02-26T11:19:59.083Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/bvalue-data-scientist/billingInfo {"name":"projects/bvalue-data-scientist/billingInfo","projectId":"bvalue-data-scientist","billingAccountName":"","billingEnabled":false}
+[info] i  dataconnect: ensuring required API sqladmin.googleapis.com is enabled... 
+[debug] [2025-02-26T11:19:59.085Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:19:59.085Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:19:59.086Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/bvalue-data-scientist/services/sqladmin.googleapis.com [none]
+[debug] [2025-02-26T11:19:59.086Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/bvalue-data-scientist/services/sqladmin.googleapis.com x-goog-quota-user=projects/bvalue-data-scientist
+[debug] [2025-02-26T11:19:59.902Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/bvalue-data-scientist/services/sqladmin.googleapis.com 200
+[debug] [2025-02-26T11:19:59.902Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/bvalue-data-scientist/services/sqladmin.googleapis.com [omitted]
+[info] +  dataconnect: required API sqladmin.googleapis.com is enabled 
+[info] i  dataconnect\dataconnect.yaml is unchanged 
+[info] i  dataconnect\schema\schema.gql is unchanged 
+[info] +  Wrote dataconnect\connector\connector.yaml 
+[info] i  dataconnect\connector\queries.gql is unchanged 
+[info] i  dataconnect\connector\mutations.gql is unchanged 
+[info] +  Detected WEB app in directory C:\Users\heman\bvalue\bvalue-firebase 
+[info] i  Wrote new config to C:\Users\heman\bvalue\bvalue-firebase\dataconnect\connector/connector.yaml 
+[info] I0226 11:20:18.895295   19284 codegen.go:82] [connector "default" javascriptSdk] Generating sources into "C:\\Users\\heman\\bvalue\\bvalue-firebase\\dataconnect-generated\\js\\default-connector"
+I0226 11:20:18.904553   19284 generate.go:40] Generated all sources. Writing them to disk...
+I0226 11:20:18.911814   19284 collector.go:107] connector "default" javascriptSdk wrote into "C:\\Users\\heman\\bvalue\\bvalue-firebase\\dataconnect-generated\\js\\default-connector"
+Generated sources: package.json [819B] react\esm\package.json [17B] react\index.cjs.js [194B] index.d.ts [259B] esm\index.esm.js [174B] esm\package.json [17B] react\package.json [468B] react\esm\index.esm.js [181B] index.cjs.js [215B] README.md [2740B] react\index.d.ts [227B] 
+I0226 11:20:18.941361   19284 installsdk.go:76] Running command: C:\Program Files\nodejs\npm.cmd install file:dataconnect-generated\js\default-connector
+
+[info] i  Generated SDK code for default 
+[info] +  If you'd like to add more generated SDKs to your app your later, run firebase init dataconnect:sdk again 
+[info] i  If you'd like to provision a CloudSQL Postgres instance on the Firebase Data Connect no-cost trial:
+1. Please upgrade to the pay-as-you-go (Blaze) billing plan. Visit the following page:
+     https://console.firebase.google.com/project/bvalue-data-scientist/usage/details
+2. Run firebase init dataconnect again to configure the Cloud SQL instance.
+3. Run firebase deploy --only dataconnect to deploy your Data Connect service. 
+[info] 
+=== Firestore Setup
+[debug] [2025-02-26T11:20:24.803Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:20:24.804Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:20:24.804Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/bvalue-data-scientist/services/firestore.googleapis.com [none]
+[debug] [2025-02-26T11:20:24.804Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/bvalue-data-scientist/services/firestore.googleapis.com x-goog-quota-user=projects/bvalue-data-scientist
+[debug] [2025-02-26T11:20:25.574Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/bvalue-data-scientist/services/firestore.googleapis.com 200
+[debug] [2025-02-26T11:20:25.575Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/bvalue-data-scientist/services/firestore.googleapis.com [omitted]
+[debug] [2025-02-26T11:20:25.576Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:20:25.576Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:20:25.577Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/bvalue-data-scientist/databases/(default) [none]
+[debug] [2025-02-26T11:20:26.295Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/bvalue-data-scientist/databases/(default) 200
+[debug] [2025-02-26T11:20:26.295Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/bvalue-data-scientist/databases/(default) {"name":"projects/bvalue-data-scientist/databases/(default)","uid":"cb89199d-7024-401b-8d12-76cc77d5f71a","createTime":"2025-02-03T21:39:07.875255Z","updateTime":"2025-02-03T21:39:07.875255Z","locationId":"nam5","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2025-02-26T10:20:25.656762Z","appEngineIntegrationMode":"DISABLED","keyPrefix":"s","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","databaseEdition":"STANDARD","etag":"IPDlvZSc4YsDMOaOvYe/qIsD"}
+[debug] [2025-02-26T11:20:26.295Z] database_type: FIRESTORE_NATIVE
+[debug] [2025-02-26T11:20:26.295Z] database_type: FIRESTORE_NATIVE
+[debug] [2025-02-26T11:20:26.296Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-02-26T11:20:26.296Z] > authorizing via signed-in user (tn.gangwar@gmail.com)
+[debug] [2025-02-26T11:20:26.297Z] [iam] checking project bvalue-data-scientist for permissions ["firebase.projects.get"]
+[debug] [2025-02-26T11:20:26.297Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:20:26.297Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:20:26.298Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/bvalue-data-scientist:testIamPermissions [none]
+[debug] [2025-02-26T11:20:26.298Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/bvalue-data-scientist:testIamPermissions x-goog-quota-user=projects/bvalue-data-scientist
+[debug] [2025-02-26T11:20:26.298Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/bvalue-data-scientist:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-02-26T11:20:26.528Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/bvalue-data-scientist:testIamPermissions 200
+[debug] [2025-02-26T11:20:26.529Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/bvalue-data-scientist:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2025-02-26T11:20:38.658Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:20:38.658Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:20:38.659Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:20:38.659Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:20:38.659Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/bvalue-data-scientist/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2025-02-26T11:20:38.663Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/bvalue-data-scientist/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* [none]
+[debug] [2025-02-26T11:20:39.340Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/bvalue-data-scientist/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2025-02-26T11:20:39.341Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/bvalue-data-scientist/databases/(default)/collectionGroups/-/indexes {}
+[debug] [2025-02-26T11:20:39.363Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/bvalue-data-scientist/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* 200
+[debug] [2025-02-26T11:20:39.363Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/bvalue-data-scientist/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* {"fields":[{"name":"projects/bvalue-data-scientist/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[info] 
+=== Genkit Setup
+[debug] [2025-02-26T11:20:48.655Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-02-26T11:20:48.656Z] > authorizing via signed-in user (tn.gangwar@gmail.com)
+[debug] [2025-02-26T11:20:48.656Z] [iam] checking project bvalue-data-scientist for permissions ["firebase.projects.get"]
+[debug] [2025-02-26T11:20:48.656Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:20:48.657Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:20:48.657Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/bvalue-data-scientist:testIamPermissions [none]
+[debug] [2025-02-26T11:20:48.657Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/bvalue-data-scientist:testIamPermissions x-goog-quota-user=projects/bvalue-data-scientist
+[debug] [2025-02-26T11:20:48.657Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/bvalue-data-scientist:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-02-26T11:20:49.280Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/bvalue-data-scientist:testIamPermissions 200
+[debug] [2025-02-26T11:20:49.280Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/bvalue-data-scientist:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-02-26T11:20:49.280Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:20:49.281Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:20:49.281Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:20:49.281Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:20:49.281Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/bvalue-data-scientist/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-02-26T11:20:49.281Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/bvalue-data-scientist/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/bvalue-data-scientist
+[debug] [2025-02-26T11:20:49.285Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/bvalue-data-scientist/services/runtimeconfig.googleapis.com [none]
+[debug] [2025-02-26T11:20:49.285Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/bvalue-data-scientist/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/bvalue-data-scientist
+[debug] [2025-02-26T11:20:50.040Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/bvalue-data-scientist/services/runtimeconfig.googleapis.com 200
+[debug] [2025-02-26T11:20:50.040Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/bvalue-data-scientist/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2025-02-26T11:20:50.135Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/bvalue-data-scientist/services/cloudfunctions.googleapis.com 200
+[debug] [2025-02-26T11:20:50.135Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/bvalue-data-scientist/services/cloudfunctions.googleapis.com [omitted]
+[info] Let's create a new codebase for your functions.
+[info] A directory corresponding to the codebase will be created in your project
+[info] with sample code pre-configured.
+
+[info] See https://firebase.google.com/docs/functions/organize-functions for
+[info] more information on organizing your functions using codebases.
+
+[info] Functions can be deployed with firebase deploy.
+
+[info] +  Wrote functions/package.json 
+[info] i  functions/.eslintrc.js is unchanged 
+[info] +  Wrote functions/tsconfig.json 
+[info] i  functions/tsconfig.dev.json is unchanged 
+[info] i  functions/src/index.ts is unchanged 
+[info] i  functions/.gitignore is unchanged 
+[info] 
+[info] i  genkit: Installing Genkit CLI version 1.0.5
+ 
+[info] i  aiplatform: ensuring required API aiplatform.googleapis.com is enabled... 
+[debug] [2025-02-26T11:25:53.099Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:25:53.099Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:25:53.100Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/bvalue-data-scientist/services/aiplatform.googleapis.com [none]
+[debug] [2025-02-26T11:25:53.100Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/bvalue-data-scientist/services/aiplatform.googleapis.com x-goog-quota-user=projects/bvalue-data-scientist
+[debug] [2025-02-26T11:25:54.438Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/bvalue-data-scientist/services/aiplatform.googleapis.com 200
+[debug] [2025-02-26T11:25:54.438Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/bvalue-data-scientist/services/aiplatform.googleapis.com [omitted]
+[warn] !  aiplatform: missing required API aiplatform.googleapis.com. Enabling now... 
+[debug] [2025-02-26T11:25:54.440Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:25:54.440Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:25:54.440Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/bvalue-data-scientist/services/aiplatform.googleapis.com:enable [none]
+[debug] [2025-02-26T11:25:54.440Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/bvalue-data-scientist/services/aiplatform.googleapis.com:enable x-goog-quota-user=projects/bvalue-data-scientist
+[debug] [2025-02-26T11:25:55.429Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/bvalue-data-scientist/services/aiplatform.googleapis.com:enable 400
+[debug] [2025-02-26T11:25:55.430Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/bvalue-data-scientist/services/aiplatform.googleapis.com:enable [omitted]
+[error] !!  genkit: Genkit initialization failed: Your project bvalue-data-scientist must be on the Blaze (pay-as-you-go) plan to complete this command. Required API aiplatform.googleapis.com can't be enabled until the upgrade is complete. To upgrade, visit the following URL:
+
+https://console.firebase.google.com/project/bvalue-data-scientist/usage/details 
+[info] 
+=== Functions Setup
+[debug] [2025-02-26T11:25:55.437Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-02-26T11:25:55.438Z] > authorizing via signed-in user (tn.gangwar@gmail.com)
+[debug] [2025-02-26T11:25:55.439Z] [iam] checking project bvalue-data-scientist for permissions ["firebase.projects.get"]
+[debug] [2025-02-26T11:25:55.440Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:25:55.440Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:25:55.441Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/bvalue-data-scientist:testIamPermissions [none]
+[debug] [2025-02-26T11:25:55.441Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/bvalue-data-scientist:testIamPermissions x-goog-quota-user=projects/bvalue-data-scientist
+[debug] [2025-02-26T11:25:55.441Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/bvalue-data-scientist:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-02-26T11:25:55.651Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/bvalue-data-scientist:testIamPermissions 200
+[debug] [2025-02-26T11:25:55.652Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/bvalue-data-scientist:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-02-26T11:25:55.652Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:25:55.652Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:25:55.652Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:25:55.652Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:25:55.653Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/bvalue-data-scientist/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-02-26T11:25:55.653Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/bvalue-data-scientist/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/bvalue-data-scientist
+[debug] [2025-02-26T11:25:55.653Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/bvalue-data-scientist/services/runtimeconfig.googleapis.com [none]
+[debug] [2025-02-26T11:25:55.653Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/bvalue-data-scientist/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/bvalue-data-scientist
+[debug] [2025-02-26T11:25:56.377Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/bvalue-data-scientist/services/cloudfunctions.googleapis.com 200
+[debug] [2025-02-26T11:25:56.377Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/bvalue-data-scientist/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2025-02-26T11:25:56.400Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/bvalue-data-scientist/services/runtimeconfig.googleapis.com 200
+[debug] [2025-02-26T11:25:56.401Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/bvalue-data-scientist/services/runtimeconfig.googleapis.com [omitted]
+[info] 
+Detected existing codebase(s): default
+
+[info] 
+Overwriting codebase default...
+
+[info] +  Wrote functions/package.json 
+[info] +  Wrote functions/index.js 
+[info] +  Wrote functions/.eslintrc.js 
+[info] +  Wrote functions/.gitignore 
+[info] 
+=== Apphosting Setup
+[debug] [2025-02-26T11:26:25.829Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:26:25.829Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:26:25.829Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/bvalue-data-scientist/billingInfo [none]
+[debug] [2025-02-26T11:26:26.591Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/bvalue-data-scientist/billingInfo 200
+[debug] [2025-02-26T11:26:26.591Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/bvalue-data-scientist/billingInfo {"name":"projects/bvalue-data-scientist/billingInfo","projectId":"bvalue-data-scientist","billingAccountName":"","billingEnabled":false}
+[info] i  Writing default settings to apphosting.yaml... 
+[info] i  apphosting.yaml is unchanged 
+[info] +  Create a new App Hosting backend with `firebase apphosting:backends:create` 
+[info] 
+=== Hosting Setup
+[debug] [2025-02-26T11:26:26.611Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:26:26.611Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:26:26.612Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/bvalue-data-scientist [none]
+[debug] [2025-02-26T11:26:26.861Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/bvalue-data-scientist 200
+[debug] [2025-02-26T11:26:26.861Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/bvalue-data-scientist {"projectId":"bvalue-data-scientist","projectNumber":"337049350975","displayName":"BValue Data Scientist","name":"projects/bvalue-data-scientist","resources":{"hostingSite":"bvalue-data-scientist","realtimeDatabaseInstance":"bvalue-data-scientist-default-rtdb"},"state":"ACTIVE","etag":"1_5be28929-911a-46b0-a8c2-ea4994fa3ef2"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2025-02-26T11:26:56.091Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2025-02-26T11:26:56.197Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2025-02-26T11:26:56.197Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"11.3.1","browserURL":"https://www.gstatic.com/firebasejs/11.3.1/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/11.3.1/firebase.tgz"},"live":{"version":"11.3","browserURL":"https://www.gstatic.com/firebasejs/live/11.3/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/11.3/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/11.3.1/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/11.3.1/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/11.3.1/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/11.3.1/firebase-auth/cordova.js","auth/web-extension":"https://www.gstatic.com/firebasejs/11.3.1/firebase-auth/web-extension.js","functions":"https://www.gstatic.com/firebasejs/11.3.1/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/11.3.1/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/11.3.1/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/11.3.1/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/11.3.1/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/11.3.1/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/11.3.1/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/11.3.1/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/11.3.1/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/11.3.1/firebase-database.js","vertexai":"https://www.gstatic.com/firebasejs/11.3.1/firebase-vertexai.js","data-connect":"https://www.gstatic.com/firebasejs/11.3.1/firebase-data-connect.js","firestore.memory":"https://www.gstatic.com/firebasejs/11.3.1/firebase-firestore.memory.js"}}
+[info] i  y/index.html is unchanged 
+[info] 
+[info] i  Detected a .git folder at C:\Users\heman\bvalue\bvalue-firebase 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=187650808&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2025-02-26T11:26:57.066Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2025-02-26T11:26:57.066Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2025-02-26T11:26:57.296Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2025-02-26T11:26:57.297Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2025-02-26T11:26:57.316Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2025-02-26T11:26:57.591Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2025-02-26T11:26:57.591Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"tngbi","id":153734758,"node_id":"U_kgDOCSnOZg","avatar_url":"https://avatars.githubusercontent.com/u/153734758?v=4","gravatar_id":"","url":"https://api.github.com/users/tngbi","html_url":"https://github.com/tngbi","followers_url":"https://api.github.com/users/tngbi/followers","following_url":"https://api.github.com/users/tngbi/following{/other_user}","gists_url":"https://api.github.com/users/tngbi/gists{/gist_id}","starred_url":"https://api.github.com/users/tngbi/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/tngbi/subscriptions","organizations_url":"https://api.github.com/users/tngbi/orgs","repos_url":"https://api.github.com/users/tngbi/repos","events_url":"https://api.github.com/users/tngbi/events{/privacy}","received_events_url":"https://api.github.com/users/tngbi/received_events","type":"User","user_view_type":"private","site_admin":false,"name":null,"company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"notification_email":null,"public_repos":8,"public_gists":0,"followers":0,"following":2,"created_at":"2023-12-13T12:12:58Z","updated_at":"2025-02-25T22:08:24Z","private_gists":0,"total_private_repos":2,"owned_private_repos":2,"disk_usage":21563,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as tngbi 
+[info] 
+[debug] [2025-02-26T11:27:25.572Z] >>> [apiv2][query] GET https://api.github.com/repos/tngbi/bvalue/actions/secrets/public-key type=owner
+[debug] [2025-02-26T11:27:25.767Z] <<< [apiv2][status] GET https://api.github.com/repos/tngbi/bvalue/actions/secrets/public-key 200
+[debug] [2025-02-26T11:27:25.767Z] <<< [apiv2][body] GET https://api.github.com/repos/tngbi/bvalue/actions/secrets/public-key {"key_id":"3380204578043523366","key":"PWNWmoNcOJ6ISTfjzWe4KtepDWDelcPGJBYajkqb4UQ="}
+[debug] [2025-02-26T11:27:25.771Z] >>> [apiv2][query] GET https://api.github.com/repos/tngbi/bvalue [none]
+[debug] [2025-02-26T11:27:25.995Z] <<< [apiv2][status] GET https://api.github.com/repos/tngbi/bvalue 200
+[debug] [2025-02-26T11:27:25.995Z] <<< [apiv2][body] GET https://api.github.com/repos/tngbi/bvalue {"id":939017951,"node_id":"R_kgDON_hG3w","name":"bvalue","full_name":"tngbi/bvalue","private":false,"owner":{"login":"tngbi","id":153734758,"node_id":"U_kgDOCSnOZg","avatar_url":"https://avatars.githubusercontent.com/u/153734758?v=4","gravatar_id":"","url":"https://api.github.com/users/tngbi","html_url":"https://github.com/tngbi","followers_url":"https://api.github.com/users/tngbi/followers","following_url":"https://api.github.com/users/tngbi/following{/other_user}","gists_url":"https://api.github.com/users/tngbi/gists{/gist_id}","starred_url":"https://api.github.com/users/tngbi/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/tngbi/subscriptions","organizations_url":"https://api.github.com/users/tngbi/orgs","repos_url":"https://api.github.com/users/tngbi/repos","events_url":"https://api.github.com/users/tngbi/events{/privacy}","received_events_url":"https://api.github.com/users/tngbi/received_events","type":"User","user_view_type":"public","site_admin":false},"html_url":"https://github.com/tngbi/bvalue","description":null,"fork":false,"url":"https://api.github.com/repos/tngbi/bvalue","forks_url":"https://api.github.com/repos/tngbi/bvalue/forks","keys_url":"https://api.github.com/repos/tngbi/bvalue/keys{/key_id}","collaborators_url":"https://api.github.com/repos/tngbi/bvalue/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/tngbi/bvalue/teams","hooks_url":"https://api.github.com/repos/tngbi/bvalue/hooks","issue_events_url":"https://api.github.com/repos/tngbi/bvalue/issues/events{/number}","events_url":"https://api.github.com/repos/tngbi/bvalue/events","assignees_url":"https://api.github.com/repos/tngbi/bvalue/assignees{/user}","branches_url":"https://api.github.com/repos/tngbi/bvalue/branches{/branch}","tags_url":"https://api.github.com/repos/tngbi/bvalue/tags","blobs_url":"https://api.github.com/repos/tngbi/bvalue/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/tngbi/bvalue/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/tngbi/bvalue/git/refs{/sha}","trees_url":"https://api.github.com/repos/tngbi/bvalue/git/trees{/sha}","statuses_url":"https://api.github.com/repos/tngbi/bvalue/statuses/{sha}","languages_url":"https://api.github.com/repos/tngbi/bvalue/languages","stargazers_url":"https://api.github.com/repos/tngbi/bvalue/stargazers","contributors_url":"https://api.github.com/repos/tngbi/bvalue/contributors","subscribers_url":"https://api.github.com/repos/tngbi/bvalue/subscribers","subscription_url":"https://api.github.com/repos/tngbi/bvalue/subscription","commits_url":"https://api.github.com/repos/tngbi/bvalue/commits{/sha}","git_commits_url":"https://api.github.com/repos/tngbi/bvalue/git/commits{/sha}","comments_url":"https://api.github.com/repos/tngbi/bvalue/comments{/number}","issue_comment_url":"https://api.github.com/repos/tngbi/bvalue/issues/comments{/number}","contents_url":"https://api.github.com/repos/tngbi/bvalue/contents/{+path}","compare_url":"https://api.github.com/repos/tngbi/bvalue/compare/{base}...{head}","merges_url":"https://api.github.com/repos/tngbi/bvalue/merges","archive_url":"https://api.github.com/repos/tngbi/bvalue/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/tngbi/bvalue/downloads","issues_url":"https://api.github.com/repos/tngbi/bvalue/issues{/number}","pulls_url":"https://api.github.com/repos/tngbi/bvalue/pulls{/number}","milestones_url":"https://api.github.com/repos/tngbi/bvalue/milestones{/number}","notifications_url":"https://api.github.com/repos/tngbi/bvalue/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/tngbi/bvalue/labels{/name}","releases_url":"https://api.github.com/repos/tngbi/bvalue/releases{/id}","deployments_url":"https://api.github.com/repos/tngbi/bvalue/deployments","created_at":"2025-02-25T21:27:11Z","updated_at":"2025-02-25T21:27:12Z","pushed_at":"2025-02-25T21:27:12Z","git_url":"git://github.com/tngbi/bvalue.git","ssh_url":"git@github.com:tngbi/bvalue.git","clone_url":"https://github.com/tngbi/bvalue.git","svn_url":"https://github.com/tngbi/bvalue","homepage":null,"size":0,"stargazers_count":0,"watchers_count":0,"language":null,"has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"has_discussions":false,"forks_count":0,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":0,"license":null,"allow_forking":true,"is_template":false,"web_commit_signoff_required":false,"topics":[],"visibility":"public","forks":0,"open_issues":0,"watchers":0,"default_branch":"main","permissions":{"admin":true,"maintain":true,"push":true,"triage":true,"pull":true},"temp_clone_token":"","allow_squash_merge":true,"allow_merge_commit":true,"allow_rebase_merge":true,"allow_auto_merge":false,"delete_branch_on_merge":false,"allow_update_branch":false,"use_squash_pr_title_as_default":false,"squash_merge_commit_message":"COMMIT_MESSAGES","squash_merge_commit_title":"COMMIT_OR_PR_TITLE","merge_commit_message":"PR_TITLE","merge_commit_title":"MERGE_MESSAGE","security_and_analysis":{"secret_scanning":{"status":"enabled"},"secret_scanning_push_protection":{"status":"enabled"},"dependabot_security_updates":{"status":"disabled"},"secret_scanning_non_provider_patterns":{"status":"disabled"},"secret_scanning_validity_checks":{"status":"disabled"}},"network_count":0,"subscribers_count":1}
+[debug] [2025-02-26T11:27:26.000Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:27:26.001Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:27:26.001Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/bvalue-data-scientist/serviceAccounts [none]
+[debug] [2025-02-26T11:27:26.001Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/bvalue-data-scientist/serviceAccounts {"accountId":"github-action-939017951","serviceAccount":{"displayName":"GitHub Actions (tngbi/bvalue)","description":"A service account with permission to deploy to Firebase Hosting and Cloud Functions for the GitHub repository tngbi/bvalue"}}
+[debug] [2025-02-26T11:27:26.901Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/bvalue-data-scientist/serviceAccounts 409
+[debug] [2025-02-26T11:27:26.901Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/bvalue-data-scientist/serviceAccounts [omitted]
+[debug] [2025-02-26T11:27:26.903Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:27:26.903Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:27:26.904Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:27:26.904Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:27:26.904Z] >>> [apiv2][query] GET https://iam.googleapis.com/v1/projects/bvalue-data-scientist/serviceAccounts/github-action-939017951@bvalue-data-scientist.iam.gserviceaccount.com [none]
+[debug] [2025-02-26T11:27:26.905Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/bvalue-data-scientist:getIamPolicy [none]
+[debug] [2025-02-26T11:27:27.060Z] <<< [apiv2][status] GET https://iam.googleapis.com/v1/projects/bvalue-data-scientist/serviceAccounts/github-action-939017951@bvalue-data-scientist.iam.gserviceaccount.com 200
+[debug] [2025-02-26T11:27:27.060Z] <<< [apiv2][body] GET https://iam.googleapis.com/v1/projects/bvalue-data-scientist/serviceAccounts/github-action-939017951@bvalue-data-scientist.iam.gserviceaccount.com {"name":"projects/bvalue-data-scientist/serviceAccounts/github-action-939017951@bvalue-data-scientist.iam.gserviceaccount.com","projectId":"bvalue-data-scientist","uniqueId":"105470018199062035772","email":"github-action-939017951@bvalue-data-scientist.iam.gserviceaccount.com","displayName":"GitHub Actions (tngbi/bvalue)","etag":"MDEwMjE5MjA=","description":"A service account with permission to deploy to Firebase Hosting and Cloud Functions for the GitHub repository tngbi/bvalue","oauth2ClientId":"105470018199062035772"}
+[debug] [2025-02-26T11:27:27.652Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/bvalue-data-scientist:getIamPolicy 200
+[debug] [2025-02-26T11:27:27.652Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/bvalue-data-scientist:getIamPolicy {"version":1,"etag":"BwYu/r2Vct0=","bindings":[{"role":"roles/cloudfunctions.developer","members":["serviceAccount:github-action-731343660@bvalue-data-scientist.iam.gserviceaccount.com","serviceAccount:github-action-939017951@bvalue-data-scientist.iam.gserviceaccount.com"]},{"role":"roles/cloudfunctions.serviceAgent","members":["serviceAccount:service-337049350975@gcf-admin-robot.iam.gserviceaccount.com"]},{"role":"roles/editor","members":["serviceAccount:337049350975@cloudservices.gserviceaccount.com","serviceAccount:bvalue-data-scientist@appspot.gserviceaccount.com"]},{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:service-337049350975@gcp-sa-firebase.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-fbsvc@bvalue-data-scientist.iam.gserviceaccount.com"]},{"role":"roles/firebaseappcheck.admin","members":["serviceAccount:firebase-adminsdk-fbsvc@bvalue-data-scientist.iam.gserviceaccount.com"]},{"role":"roles/firebaseauth.admin","members":["serviceAccount:github-action-731343660@bvalue-data-scientist.iam.gserviceaccount.com","serviceAccount:github-action-939017951@bvalue-data-scientist.iam.gserviceaccount.com"]},{"role":"roles/firebasehosting.admin","members":["serviceAccount:github-action-731343660@bvalue-data-scientist.iam.gserviceaccount.com","serviceAccount:github-action-939017951@bvalue-data-scientist.iam.gserviceaccount.com"]},{"role":"roles/firebasemods.serviceAgent","members":["serviceAccount:service-337049350975@gcp-sa-firebasemods.iam.gserviceaccount.com"]},{"role":"roles/firebaserules.system","members":["serviceAccount:service-337049350975@firebase-rules.iam.gserviceaccount.com"]},{"role":"roles/firestore.serviceAgent","members":["serviceAccount:service-337049350975@gcp-sa-firestore.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-fbsvc@bvalue-data-scientist.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:tn.gangwar@gmail.com"]},{"role":"roles/run.viewer","members":["serviceAccount:github-action-731343660@bvalue-data-scientist.iam.gserviceaccount.com","serviceAccount:github-action-939017951@bvalue-data-scientist.iam.gserviceaccount.com"]},{"role":"roles/serviceusage.apiKeysViewer","members":["serviceAccount:github-action-731343660@bvalue-data-scientist.iam.gserviceaccount.com","serviceAccount:github-action-939017951@bvalue-data-scientist.iam.gserviceaccount.com"]},{"role":"roles/serviceusage.serviceUsageConsumer","members":["serviceAccount:github-action-731343660@bvalue-data-scientist.iam.gserviceaccount.com","serviceAccount:github-action-939017951@bvalue-data-scientist.iam.gserviceaccount.com"]}]}
+[debug] [2025-02-26T11:27:27.661Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:27:27.661Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:27:27.661Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/bvalue-data-scientist:setIamPolicy [none]
+[debug] [2025-02-26T11:27:27.661Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/bvalue-data-scientist:setIamPolicy {"policy":{"version":1,"etag":"BwYu/r2Vct0=","bindings":[{"role":"roles/cloudfunctions.developer","members":["serviceAccount:github-action-731343660@bvalue-data-scientist.iam.gserviceaccount.com","serviceAccount:github-action-939017951@bvalue-data-scientist.iam.gserviceaccount.com"]},{"role":"roles/cloudfunctions.serviceAgent","members":["serviceAccount:service-337049350975@gcf-admin-robot.iam.gserviceaccount.com"]},{"role":"roles/editor","members":["serviceAccount:337049350975@cloudservices.gserviceaccount.com","serviceAccount:bvalue-data-scientist@appspot.gserviceaccount.com"]},{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:service-337049350975@gcp-sa-firebase.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-fbsvc@bvalue-data-scientist.iam.gserviceaccount.com"]},{"role":"roles/firebaseappcheck.admin","members":["serviceAccount:firebase-adminsdk-fbsvc@bvalue-data-scientist.iam.gserviceaccount.com"]},{"role":"roles/firebaseauth.admin","members":["serviceAccount:github-action-731343660@bvalue-data-scientist.iam.gserviceaccount.com","serviceAccount:github-action-939017951@bvalue-data-scientist.iam.gserviceaccount.com"]},{"role":"roles/firebasehosting.admin","members":["serviceAccount:github-action-731343660@bvalue-data-scientist.iam.gserviceaccount.com","serviceAccount:github-action-939017951@bvalue-data-scientist.iam.gserviceaccount.com"]},{"role":"roles/firebasemods.serviceAgent","members":["serviceAccount:service-337049350975@gcp-sa-firebasemods.iam.gserviceaccount.com"]},{"role":"roles/firebaserules.system","members":["serviceAccount:service-337049350975@firebase-rules.iam.gserviceaccount.com"]},{"role":"roles/firestore.serviceAgent","members":["serviceAccount:service-337049350975@gcp-sa-firestore.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-fbsvc@bvalue-data-scientist.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:tn.gangwar@gmail.com"]},{"role":"roles/run.viewer","members":["serviceAccount:github-action-731343660@bvalue-data-scientist.iam.gserviceaccount.com","serviceAccount:github-action-939017951@bvalue-data-scientist.iam.gserviceaccount.com"]},{"role":"roles/serviceusage.apiKeysViewer","members":["serviceAccount:github-action-731343660@bvalue-data-scientist.iam.gserviceaccount.com","serviceAccount:github-action-939017951@bvalue-data-scientist.iam.gserviceaccount.com"]},{"role":"roles/serviceusage.serviceUsageConsumer","members":["serviceAccount:github-action-731343660@bvalue-data-scientist.iam.gserviceaccount.com","serviceAccount:github-action-939017951@bvalue-data-scientist.iam.gserviceaccount.com"]}]},"updateMask":"bindings"}
+[debug] [2025-02-26T11:27:28.520Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/bvalue-data-scientist:setIamPolicy 200
+[debug] [2025-02-26T11:27:28.520Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/bvalue-data-scientist:setIamPolicy {"version":1,"etag":"BwYvCdu6CKI=","bindings":[{"role":"roles/cloudfunctions.developer","members":["serviceAccount:github-action-731343660@bvalue-data-scientist.iam.gserviceaccount.com","serviceAccount:github-action-939017951@bvalue-data-scientist.iam.gserviceaccount.com"]},{"role":"roles/cloudfunctions.serviceAgent","members":["serviceAccount:service-337049350975@gcf-admin-robot.iam.gserviceaccount.com"]},{"role":"roles/editor","members":["serviceAccount:337049350975@cloudservices.gserviceaccount.com","serviceAccount:bvalue-data-scientist@appspot.gserviceaccount.com"]},{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:service-337049350975@gcp-sa-firebase.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-fbsvc@bvalue-data-scientist.iam.gserviceaccount.com"]},{"role":"roles/firebaseappcheck.admin","members":["serviceAccount:firebase-adminsdk-fbsvc@bvalue-data-scientist.iam.gserviceaccount.com"]},{"role":"roles/firebaseauth.admin","members":["serviceAccount:github-action-731343660@bvalue-data-scientist.iam.gserviceaccount.com","serviceAccount:github-action-939017951@bvalue-data-scientist.iam.gserviceaccount.com"]},{"role":"roles/firebasehosting.admin","members":["serviceAccount:github-action-731343660@bvalue-data-scientist.iam.gserviceaccount.com","serviceAccount:github-action-939017951@bvalue-data-scientist.iam.gserviceaccount.com"]},{"role":"roles/firebasemods.serviceAgent","members":["serviceAccount:service-337049350975@gcp-sa-firebasemods.iam.gserviceaccount.com"]},{"role":"roles/firebaserules.system","members":["serviceAccount:service-337049350975@firebase-rules.iam.gserviceaccount.com"]},{"role":"roles/firestore.serviceAgent","members":["serviceAccount:service-337049350975@gcp-sa-firestore.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-fbsvc@bvalue-data-scientist.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:tn.gangwar@gmail.com"]},{"role":"roles/run.viewer","members":["serviceAccount:github-action-731343660@bvalue-data-scientist.iam.gserviceaccount.com","serviceAccount:github-action-939017951@bvalue-data-scientist.iam.gserviceaccount.com"]},{"role":"roles/serviceusage.apiKeysViewer","members":["serviceAccount:github-action-731343660@bvalue-data-scientist.iam.gserviceaccount.com","serviceAccount:github-action-939017951@bvalue-data-scientist.iam.gserviceaccount.com"]},{"role":"roles/serviceusage.serviceUsageConsumer","members":["serviceAccount:github-action-731343660@bvalue-data-scientist.iam.gserviceaccount.com","serviceAccount:github-action-939017951@bvalue-data-scientist.iam.gserviceaccount.com"]}]}
+[debug] [2025-02-26T11:27:28.521Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:27:28.521Z] Checked if tokens are valid: true, expires at: 1740572397001
+[debug] [2025-02-26T11:27:28.521Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/bvalue-data-scientist/serviceAccounts/github-action-939017951@bvalue-data-scientist.iam.gserviceaccount.com/keys [none]
+[debug] [2025-02-26T11:27:28.521Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/bvalue-data-scientist/serviceAccounts/github-action-939017951@bvalue-data-scientist.iam.gserviceaccount.com/keys {"keyAlgorithm":"KEY_ALG_UNSPECIFIED","privateKeyType":"TYPE_GOOGLE_CREDENTIALS_FILE"}
+[debug] [2025-02-26T11:27:29.226Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/bvalue-data-scientist/serviceAccounts/github-action-939017951@bvalue-data-scientist.iam.gserviceaccount.com/keys 200
+[debug] [2025-02-26T11:27:29.226Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/bvalue-data-scientist/serviceAccounts/github-action-939017951@bvalue-data-scientist.iam.gserviceaccount.com/keys {"name":"projects/bvalue-data-scientist/serviceAccounts/github-action-939017951@bvalue-data-scientist.iam.gserviceaccount.com/keys/89cc9adde9a27475fee21d0364c78d27e2c6d29b","privateKeyType":"TYPE_GOOGLE_CREDENTIALS_FILE","privateKeyData":"ewogICJ0eXBlIjogInNlcnZpY2VfYWNjb3VudCIsCiAgInByb2plY3RfaWQiOiAiYnZhbHVlLWRhdGEtc2NpZW50aXN0IiwKICAicHJpdmF0ZV9rZXlfaWQiOiAiODljYzlhZGRlOWEyNzQ3NWZlZTIxZDAzNjRjNzhkMjdlMmM2ZDI5YiIsCiAgInByaXZhdGVfa2V5IjogIi0tLS0tQkVHSU4gUFJJVkFURSBLRVktLS0tLVxuTUlJRXZ3SUJBREFOQmdrcWhraUc5dzBCQVFFRkFBU0NCS2t3Z2dTbEFnRUFBb0lCQVFDK3V5RTlXVi9uOXNGSFxuZjdmYnpOSkYxeTJnUy9XeWUvM3ZPM0ZKV29VTG9JWjQ4L3NCc1AwUUJEVm8yN2FDOFBGTC9SNWM5WGl2MzVwMFxuMHVoWFZpR3dIa2dCUWtOS21mQXhHVW45YnoyWW9IYTNucGpOUlVDdDJRZmNJZGcxUVlIV3JWMVhWR04zZG45SVxuQkU1aU53TXdtK2V5R3YvN1JkeFhoOXg5anBCazVQSW1lbmVUZ1lFdjQ5a0t1T005Wm12SGlLSE9QT3FIOC95RFxuTHN2VytkRFA4V1IyV3ZjN25ubVdQY2dwaW53blo2bHFvOXF0MEhYdWV2MnplWVJFajVIK2YvcGQvVjMvVFlTNVxuMWFjNXA0Z1ZIbm1IS09oMDViSGdFWDIxbHB1aDVOa3VzWDhwTG5XaFpEMzR2VkNETWQ1dndud0UwbTNxVFBIWFxuM09PM0djblZBZ01CQUFFQ2dnRUFET2oxc3dWZHJJSFRTMWVseGtieTVLOVA4MDJ3NzhmY3hGaXRybDFtTEFkTlxua3RwUTN5aHZ1S25RUTZ5N2lkbHRPOHVDUnFDRzdzQ2YzOUIyMFpLTzdURGZodFpKWDc5VHRyOFRkd2dVajBRdFxuUlBpRE4wRzh3d2V4dElERjliVGRhUDZMRnVJcmFXYW43dVA3dWtJbkFSOU1hNDNRVGQzSXNGUU41S0hGdkU1MFxud0VxejF5U0hEQk5KT0pSakZDRm4yTUUyRDExTjVEbFkwWFNPbHQ0cnFucURSVEhvMm42QXBlbkFrYzNtbDNkblxuK01kaHRoam5tekErTWFSV2dhOTNJby9IekdlWkM2ejlKZm8yQm5SSzFIYWhZaGpiZGFuM2JUNldwQ3Q5SFg4OVxuWEJHT01Pb3hCTGJwM0JNaW8rVlpqV1c5eFRsVmx1QnErSk04VlZLcmdRS0JnUUQ2UEtmMHNMcE1CQW5wcWh6a1xuZ3NlS3k3ZHFWRDlNckIyRW5MQmtsQ3QzN2dleHN0S3pmYUtPbytQcmdTakw3eUNkNDdyVFE5SjRmOHMvaFBhRFxuNG5jS3JJYkZoT29CNzFJQm1lTTZ5bnNsa3RVZmhyTGV1UitSNHFQak4wNkRhWGNrWFBLMSt4K3VZV1RjdmZSNlxuSlBXSUtrWXlyOWRIZGUrV3Vsd2NOZStyQ1FLQmdRRERINk9rdG0rWDczZkEvSkE5OHVyVGVHaTNHTmdsOXg3a1xuTzVnR0hIRm5ZMG1nVUVhV2x3SnVSUlZqOUdwdjk4SWRTbmZHTzNGUG13UW1hWFhWeXNoaFdIL2hSaEQzc0lkYVxuVTNZQVhRakM5TEs4L1ZTMUdkK3ZZdUY5dGNweHVwbmN5MWdwd2p2cFB4UUJ1SWk5Q0NJckxVbkg1Q2NUK2F4dFxuUzFBRkd6RC9iUUtCZ1FDS1ZkbnIxWDlINHJ1d0oxRE5xdGF4RGltWmFIV041MkJ5SFVVT2RUTUttOVk1RUVpV1xuM1k5dUY0QTZneTZRZnVPakpXLzB0dnUxamNCSW56TEFlZ09oTFB0Y1dqd2JVYmdlRm5xZDE2MzRlWkhFV2V5c1xuWDk3cUFVYmtwNENKK1ZYYURtQkc1a3IvVmV3eWMvaWhSYWxPMnovdmFYSXptU2tZUkhJRFRuWHVNUUtCZ1FDYlxuc0c4ZVNnTVl0QlpWZ2pDRmZZSXBZZllMd21NVlIrejZKeUxTSFhmUENzWUFpSTBLTTB2Wk9INHMxeVRtV2tZa1xub1BxWXpXMUlHMlJnVWQyWHpNbStBcU5tMkVWSm5TMGl3VjF5Uk1sczVWcUl1WW9SUnFmWWhZbHVpTk1UazlTWVxuL0JkSW1wYTdNWDJCTWdESTgraHZreDgvdzZmNnBFa1VtL2NwVzl6b3NRS0JnUUR0VXgxUDYrcXljUGlHcC9ZRVxuSkZhU2pqeVRiL0lYbjBiSnd3N1U3dnRNNVhhdDJiV2VvNHBwZHdHUFZ1MUVtQU00ZEtrV3grVmJLZEhmejF4VlxueFB4bm5taWtKa2hpc01nY1Q1dG9QME1BL05oOU1CSTRIQ1BvYnFtajVCYktyWXhMS2srZXJtWlU0Tzc5ZWVCTlxuQjBZTHFJZUl6UGRldjk0WUwzRjFEMWpGb3c9PVxuLS0tLS1FTkQgUFJJVkFURSBLRVktLS0tLVxuIiwKICAiY2xpZW50X2VtYWlsIjogImdpdGh1Yi1hY3Rpb24tOTM5MDE3OTUxQGJ2YWx1ZS1kYXRhLXNjaWVudGlzdC5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsCiAgImNsaWVudF9pZCI6ICIxMDU0NzAwMTgxOTkwNjIwMzU3NzIiLAogICJhdXRoX3VyaSI6ICJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20vby9vYXV0aDIvYXV0aCIsCiAgInRva2VuX3VyaSI6ICJodHRwczovL29hdXRoMi5nb29nbGVhcGlzLmNvbS90b2tlbiIsCiAgImF1dGhfcHJvdmlkZXJfeDUwOV9jZXJ0X3VybCI6ICJodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9vYXV0aDIvdjEvY2VydHMiLAogICJjbGllbnRfeDUwOV9jZXJ0X3VybCI6ICJodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9yb2JvdC92MS9tZXRhZGF0YS94NTA5L2dpdGh1Yi1hY3Rpb24tOTM5MDE3OTUxJTQwYnZhbHVlLWRhdGEtc2NpZW50aXN0LmlhbS5nc2VydmljZWFjY291bnQuY29tIiwKICAidW5pdmVyc2VfZG9tYWluIjogImdvb2dsZWFwaXMuY29tIgp9Cg==","validAfterTime":"2025-02-26T11:27:28Z","validBeforeTime":"9999-12-31T23:59:59Z","keyAlgorithm":"KEY_ALG_RSA_2048","keyOrigin":"GOOGLE_PROVIDED","keyType":"USER_MANAGED"}
+[info] 
+[info] +  Created service account github-action-939017951 with Firebase Hosting admin permissions. 
+[debug] [2025-02-26T11:27:29.259Z] >>> [apiv2][query] PUT https://api.github.com/repos/tngbi/bvalue/actions/secrets/FIREBASE_SERVICE_ACCOUNT_BVALUE_DATA_SCIENTIST [none]
+[debug] [2025-02-26T11:27:29.259Z] >>> [apiv2][body] PUT https://api.github.com/repos/tngbi/bvalue/actions/secrets/FIREBASE_SERVICE_ACCOUNT_BVALUE_DATA_SCIENTIST {"encrypted_value":"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","key_id":"3380204578043523366"}
+[debug] [2025-02-26T11:27:29.493Z] <<< [apiv2][status] PUT https://api.github.com/repos/tngbi/bvalue/actions/secrets/FIREBASE_SERVICE_ACCOUNT_BVALUE_DATA_SCIENTIST 204
+[debug] [2025-02-26T11:27:29.494Z] <<< [apiv2][body] PUT https://api.github.com/repos/tngbi/bvalue/actions/secrets/FIREBASE_SERVICE_ACCOUNT_BVALUE_DATA_SCIENTIST undefined
+[info] +  Uploaded service account JSON to GitHub as secret FIREBASE_SERVICE_ACCOUNT_BVALUE_DATA_SCIENTIST. 
+[info] i  You can manage your secrets at https://github.com/tngbi/bvalue/settings/secrets. 
+[info] 
+[info] 
+[info] +  Created workflow file C:\Users\heman\bvalue\bvalue-firebase\.github/workflows/firebase-hosting-merge.yml 
+[info] 
+[info] i  Action required: Visit this URL to revoke authorization for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] i  Action required: Push any new workflow file(s) to your repo 
+[info] 
+=== Storage Setup
+[info] 
+[info] Firebase Storage Security Rules allow you to define how and when to allow
+[info] uploads and downloads. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[info] +  Wrote storage.rules 
+[info] 
+=== Emulators Setup
